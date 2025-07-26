@@ -1,0 +1,125 @@
+SDLC
+=====
+
+
+# Software development lifecycle
+
+7 phases
+==========
+
+	1. Requirement Gathering:- 
+==========================
+
+Obj:- understand what client needs
+Activities:- meet stakeholder's:- clients, users, managers
+	Ø Gather functional & nonfunctional requirements 
+
+Output:- software requirement specification (SRS) document
+
+	2. Planning
+============
+
+Obj:- create a project plan
+Activities:- define scope, budget, and resources
+	Ø Time and cost estimation
+	Ø Risk analysis
+Output:- project plan document
+
+	3. Design
+=========
+
+Obj:- blueprint of how the system will work
+Activates:
+=======
+	Ø HLD:-high level design:- architecture, technologies, database design
+	Ø LLD:-low level design:- module designs, interface design, algorithm 
+
+Output:- design documents for HLD&LLD
+
+	4. Implementation(coding)
+========================
+
+Obj:-  write actual source code
+
+Activities 
+=========
+
+	Ø Developers follow coding guidelines 
+	Ø Use vcs for git
+	Ø Unit testing by developers 
+
+Output:- working source code modules
+
+	5. Testing 
+===========
+
+Obj:- ensure software works as expected 
+
+Activities
+========
+
+	Ø QA team tests the app using test cases
+	Ø Types:- unit testing, integration testing, system testing, UAT:- User acceptancy test
+	Ø Bug reporting and fixing
+
+Output:- test report, defect log
+
+	6. DEPLOYMENT 
+===============
+
+Obj: deliver software to end-users
+
+Activities 
+==========
+
+	Ø Deploy to production env or staging env
+	Ø Conduct deployment verification 
+	Ø Use tools like Jenkins, docker, k8s, and aws or any cloud
+
+Output:- live/released product
+
+	7. Maintenance 
+================
+
+Obj: keep the software up-to-date
+
+Activities:-
+=========
+
+	Ø Bug fixes 
+	Ø Updates, patches, security upgrades
+	Ø Feature enhancements based on the feedback
+
+Output: stable software overtime
+
+
+Benefits of sdlc
+===========
+	Ø Provide a clear road map
+	Ø Reduces risk of projects failures
+	Ø Help in accurate planning and schedule 
+	Ø Enhance project monitoring and control
+	Ø Promotes better  documentation and communication 
+
+
+IT env
+======
+
+	1. Dev env
+	2. QA env
+	3. Staging/UAT env
+	4. Prod env
+
+
+Maven
+=======
+
+	Ø Autoamtion build tool
+	Ø Pom.xml:- project object model
+
+War:- web app archive:- pkg web app only
+Jar:- java archive:- standalone java app
+Ear:- enterprise app archive :- pkg enterprise app
+
+
+Apache tomcat:- it’s a web server
