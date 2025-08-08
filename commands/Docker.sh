@@ -21,3 +21,11 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 sudo usermod -aG docker $USER
 newgrp docker
+
+
+#Other simple method
+# sudo apt install -y docker.io
+# sudo systemctl start docker
+# sudo systemctl enable docker
+# sudo usermod -aG docker $USER
+# newgrp docker
