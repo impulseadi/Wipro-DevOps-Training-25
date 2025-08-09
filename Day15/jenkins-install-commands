@@ -1,0 +1,25 @@
+# install jenkins on ubuntu
+
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+# install java on ubuntu os as prerequisite of jenkins
+
+sudo apt update
+sudo apt install fontconfig openjdk-21-jre
+java -version
+
+# Start jenkins server
+
+sudo systemctl enable jenkins 
+
+# after enabling the jenkins server using above command kindly wait upto 5 mnts then run the below start command
+
+sudo systemctl start jenkins
+
+sudo systemctl status jenkins
