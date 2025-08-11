@@ -1,0 +1,54 @@
+Jenkins terminology 
+
+15 July 2025
+10:41
+
+Jenkins controller
+============
+	Ø Formerly we called jenkins master
+	Ø It will be act a main server of jenkins
+
+Jenkins agent
+===========
+	Ø Jenkins salve
+
+Jenkins node
+==========
+
+Jenkins project 
+============
+	Ø Formerly we called as job
+
+Jenkin plugin
+=============
+
+Jenkins pipeline
+============
+	Ø Atumate build
+	Ø Test
+	Ø Deploy
+	Ø Scann
+
+SAST
+=====
+
+	Ø Static application security testing 
+
+White-box testing:- 
+Code anaylzerr:- 
+Shift left:-
+Vulnerability pattern:-
+False positive:- 
+Code reposiritry scanning:- 
+Secutrity rule test;- 
+Security technical debt:-
+
+SonarQube 
+
+How SAST WORKS?
+===============
+
+	1. Source code analysis:- 
+	2. Static rule app:- 
+	3. Reporting:-
+Pileine integration:
