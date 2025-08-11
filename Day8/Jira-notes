@@ -1,0 +1,111 @@
+JIRA
+
+02 August 2025
+09:14
+
+	Ø Jira is a project management and issue tracking tool developed by atlassian
+	Ø It is primarily used for bug tracking, agile project management and task management 
+	Ø Originally jira was created for software development teams only
+	Ø Now widely used by IT, devops team, support and business teams etc
+
+
+Why is jira used in IT?
+==================
+
+	1. Issue tracking
+  ==============
+
+	Ø Track bugs
+	Ø Incidents 
+	Ø Service requests 
+	Ø Enhancements 
+
+	2. Agile management 
+ ====================
+
+	Ø Supports scrum
+	Ø Kanban
+	Ø Hybrid methodologies 
+
+	3. Task Assignment 
+  =================
+
+	Ø Assign work to individuals or teams
+	Ø To track work progress
+	Ø To setting deadline 
+
+	4. Visibility & Reporting
+ =====================
+
+	Ø Dashboards 
+	Ø Charts
+	Ø Reports
+	Ø Workload reports
+
+	5. Workflow Automation
+ ======================
+
+	Ø Custom workflow help in automating transitions 
+
+To Do > In Progress > Done
+
+
+JIRA Terminologies
+================
+
+	1. Project
+  ==========
+
+	Ø A group of related issues/tracks.
+	Ø Each team may have a separate project
+
+	2. Issue
+ ========
+
+	Ø Task
+	Ø Bug
+	Ø Feature request
+	Ø Any unit of work
+
+	3. Epic
+  ======
+
+	Ø A large body of work that can be broken down into smaller tasks
+
+	4. Story
+  ========
+
+	Ø A user centric requirement 
+
+	5. Bug
+  ======
+
+	Ø An error or problem in the software
+
+	6. Task
+  =======
+
+	Ø A piece of work that needs to be completed
+
+	7. Sub-task
+  ==========
+
+	Ø A smaller task within a larger task or story
+
+	8. Sprint
+  =========
+
+	Ø A fixed period in scrum to complete a set of tasks, ex: 2 weeks, 1 week, 5 days
+
+	9. Board
+ =========
+
+	Ø Visual display of ur work
+
+
+Common reports in JIRA
+====================
+
+	1. Burndown chart:- how much work is remaining in the sprints 
+
+

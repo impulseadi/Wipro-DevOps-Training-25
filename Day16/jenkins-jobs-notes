@@ -1,0 +1,138 @@
+Jobs in Jenkins 
+
+11 August 2025
+15:18
+
+	1. Freestyle Project 
+  =================
+
+	Ø A flexible job type where you can configure everything via the jenkins UI form the source code checkout to build steps to post build actions
+
+Real time analogy 
+===============
+
+	Ø You want to prepare one personal to do list on paper
+
+	1. Buy groceries 
+	2. Cook dinner
+	3. Do laundry 
+	4. Clean home
+
+When to use
+===========
+
+	Ø Simple ci jobs
+	Ø Non-complex build  without much automation 
+	Ø Legacy project without pipleines
+	Ø Whenever you don’t want write script for the pipeline 
+
+Example:- compile ur code > run unit test cases > deploy war file  to tomcat
+
+
+	2. Pipeline
+  ==========
+
+	Ø A scripted or declarative way of defining the entire CICD workflow in code
+
+Real time analogy 
+===============
+
+	Ø Imagine writing a recipe in a cookbook instead of explaining it verbally each time.
+	Ø Anyone can pick up the recipe (pick up script) and cook the recipe ( run the pipeline) the exact same way.
+
+When to use
+===========
+
+	Ø Complex CICD workflows
+	Ø IAC as  a code mindset
+	Ø Reproducible build 
+
+
+	3. Multi configuration Project 
+  =========================
+
+	Ø It will run the same build in multiple env or configurations, ex: os versions, jdk versions or browsers 
+
+Real time analogy
+===============
+
+	Ø Like testing a new software on different laptops 
+
+When to use
+===========
+
+	Ø Cross platform or multi env testing
+	Ø Checking code compatibility 
+
+
+	4. Folder
+ =========
+
+	Ø It is for organizing multiple jobs into a folder structure for better management 
+
+Real time analogy
+==============
+
+	Ø Having project folders on your desktop instead of dumping all files together , keep your work neat and easy to navigate.
+
+When to use
+==========
+	Ø Large jenkins set up with many jobs
+	Ø Grouping jobs by a team, application or env
+
+
+Example:- E-commerce project folder its containing build backend, fronted and deploy
+
+	5. Multibranch Pipeline
+  ====================
+
+	Ø Automatically creates and manages pipelines for each branch in a repository 
+
+Real time analogy
+==============
+
+When to use
+==========
+
+	Ø Git workflows with multiple branch's 
+	Ø Automated ci for features branches
+
+
+	6. Organization folder
+ ===================
+
+	Ø Automatically it will scan an entire GitHub or bitbucket  org and creates job for repo
+
+Real time analogy
+===============
+
+	Ø Imagine a warehouse manager who scans all shelves and automatically set up a workstation for each crop or product that comes in warehouse.
+
+Maven Project
+============
+
+	Ø Its like a freestyle project but pre-configured with maven
+
+	Ø Jenkins doesn't just run mvn  commands blindly but it understands maven goals, pom file structure, reports, and dependencies 
+	Ø Automatically it will archive reports like unit test results, code coverage results and more.
+
+
+When to use
+==========
+
+	Ø When working with java app but with maven
+	Ø When you want jenkins to natively parse pom files and run maven goals
+	Ø When you need automatic test result and maven based reports.
+
+
+
+Item type(job)                                        best for                                             analogy
+===========                                        ========                                          ==============
+
+	1. Freestyle project                       simple , manual jobs                     personal to do list
+	2. Pipleine                                       complex workflows and IAC        recipe in a cookbook
+	3. Mulit configuration                   multiple env testing                      testing on different laptops
+	4. Folder                                          organization jobs                            project folders
+	5. Multibranch pipeline                branch-specific pipelines         separate kitchen for each chef
+	6. Organization folder     large org for auto-discovery    warehouse manager scanning shelves
+	7. Maven  project        automatic reports and results          restaurant that specializes any one recipe 
