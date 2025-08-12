@@ -1,0 +1,78 @@
+Linux 
+
+30 July 2025
+09:17
+
+	Ø It is  an open source OS kernel
+	Ø Create by Linus Torvalds in 1991
+	Ø It is the core part of many OS, known as linux distributions like ubutnu, cent os, redhat os, suse linux, fedora, windows os , mac os 
+
+Kernel: The base component of the OS. Without it, the OS doesn’t work. The kernel manages the system’s resources and communicates with the hardware. It’s responsible for memory, process, and file management.
+	Ø It will be act as a bridge betwn OS and hardware 
+
+
+History of linux
+=============
+1969:- unix developed
+1983:- GNU project started  by Richard stallman:- Gnus's not unix
+1991:- linux torvalds started linux project
+1992:- linux is combined with GNU utilities :- small program's or tools
+1993:- started distribution os like redhat os, debian/ubuntu
+Toady:- we are using many distribution os from Linux family
+
+Why Linux 
+=========
+
+	Ø Linux is a free and open source platform
+	Ø It is a combination of gnu tools + linux kernel 
+
+benefits of Linux 
+==============
+
+	1. Free & open source 
+	2. Secure 
+	3. Stable & reliable 
+	4. Package management 
+	5. Highly configurable 
+	6. Light weight 
+	7. Community support
+	8. Dominates clouds 
+	9. Powers android is 
+
+Linux vs OS
+==========
+
+Open source vs not open source
+Free vs cost
+Strong  vs security 
+Very highly available vs customization 
+Servers, devops, IoT vs  desktop's and gaming
+Strong vs weak (cmd, PowerShell)
+Apt, yum ,dnf  vs none
+Low vs medium /high
+Full control vs force sometimes 
+Large support vs ms support , paid
+
+Vi :- visual editor , directly u cant write anything, u need to become as a insert mode , on ur keyboard press letter "I"
+
+Vi :- it will create file n will open the time
+Nano:- it will create the file n will open the file
+
+Esp:wq
+Esp:q!
+
+Nano :- 
+
+Cntlr + x , cntrl +y , enter
+
+
+Read
+
+Write
+
+Execute 
+
+================
+
+User
+group

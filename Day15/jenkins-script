@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    
+    environment {
+        SCANNER_HOME= tool 'sonar-scanner'
+    }
+
+    stages {
+        stage('git checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Msocial123/Transaction-History.git'
+            }
+        }
+        
+        stage('sonarqube analysis'){
+            steps{
+                withSonarQubeEnv('sonar') {
+                  sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=murali-proejct -Dsonar.projectName=murali-proejct '''
+                 }
+            }
+        }
+    }
+}

@@ -1,0 +1,195 @@
+Python
+
+31 July 2025
+11:50
+
+	Ø It is a high level interpreted programming lng
+	Ø It was created by Van Rossum  in 1991
+
+Python is known for👇
+==================
+
+	1. Clean, readable syntax
+	2. Rich standard library 
+	3. Huge community support
+
+
+Use cases
+=========
+
+	1. Automation scripts
+	2. DevOps tools ex:- ansible
+	3. Web development 
+	4. Data science & ML
+	5. API'S & microservices
+	6. Testing & monitoring 
+
+
+Name = murali mohan
+
+Participants = 31
+
+Variable naming rules 
+==================
+
+	1. Must start with a letter or _(underscore)
+	2. Can not with a number 
+	3. Can not have space 
+	4. Can not use key words like if, class, while etc
+
+Key words
+=========
+
+False, class, from, or, none, continue, global, pass, True, def, if, raise, and, del, import, return, as, elif, in, fry, while, else, is, while, except, lambda, with, yield, not, for, break, await, finally, async
+
+
+Data types
+======
+
+	Ø Data types will define wt kind of value a variable can hold or store
+
+
+Why 
+====
+
+	Ø Python needs to know how much memory to allocate and wt operations are allowed on that values
+
+	1. Integer (int)
+==============
+
+	Ø To store numbers will use int data type
+	Ø Use case; counting, indexing and id numbers
+
+	2. Float 
+=========
+
+	Ø 82.21, 96.52, 55.10
+	Ø Whenever you want to store any decimal  number use data type float
+	Ø Use case: prices, measurements and avgs
+	
+	3. String (str)
+	========
+	
+	Ø Sequence of characters
+	Ø To store names, messages and file paths
+
+	4. List 
+=========
+
+	Ø Ordered, mutable collection of items
+	Ø Use case: to store multiple values like shpooing items, stduents marks
+
+Apple, banana, cherry
+
+	5. Tuple 
+==========
+
+	Ø Immutable collections of items
+	Ø Use case: fixed values 
+
+	6. Dict
+	===
+	
+Name: Murali mohan
+City: banglr
+Age: 29
+Vilg: Chittoor 
+
+	7. Boolean (bool)
+================
+
+	Ø True or false
+	Ø Logic, decisions, conditions 
+
+	8. Set
+=======
+
+	Ø Unordered collection of unique items
+	Ø Unique tags, removing duplication 
+
+
+Comments
+=========
+
+	Ø Comments are lines in your code that python ignores when running the program
+
+Why
+===
+	Ø Comments are for humans not for computers, to explain
+
+Types of comments
+===============
+
+	1. Single-line comment
+  ====================
+
+Name = (murali mohan)   # this is variable is holding trainer name
+
+Numbers  = (2, 4, 6, 8, 10, 12, 14, 16, 18, 20) # this variable is holding even number only
+
+Numbers (1, 3, 5, 7, 9, 11, 13, 17, 19) # this variable is storing add numbers only
+
+
+Country = ("india", "usa", "uk",  "sri lanka", "Thailand", "Bhutan") # in this variable I am storing country names.
+
+# In this variable I am storing all Indian state names
+States = ("AP", "KR", "KL", "WB", "MH", "RJ")
+
+
+	2. Multi-line comments 
+ ======================
+
+	Ø ''',   """
+
+Name = ipl
+
+  ''' The Indian Premier League (IPL) is a professional Twenty20 cricket league in India, held annually, usually between March and May. It was established in 2008 by the Board of Control for Cricket in India (BCCI). The IPL features franchise teams representing different Indian cities, and it's known for attracting top international cricketers '''
+
+Service = "cart"   
+
+""" 
+In Flipkart, the "Cart Service" or "Cart SVC" refers to the backend system responsible for managing items added to a user's virtual shopping cart. It handles functionalities like adding, removing, and modifying items, as well as storing and retrieving cart data for individual users. Essentially, it's the system that keeps track of what a user intends to purchase before they proceed to checkout """
+
+
+Loop
+====
+
+	Ø Loop is nothing but repetition
+	Ø A loop in python allows you to repeat a block of code multiple times until a certain condition is met or until you go through a set items 
+
+
+Why
+====
+
+	Ø Avoid repeating code manually 
+	Ø Automate repetitive tasks
+	Ø It will process multiple data items
+	Ø It will perform actions until a condition satisfied and 
+
+Types
+=====
+	1. for loop
+  ==========
+
+	Ø It is used for iterating over a sequence 
+
+
+# iterating over a list of items
+fruits = ['apple', 'banana', 'mango', 'grapes', 'cherry', 'papaya', 'pinaple']
+for fruit in fruits:   # it is going to iterating through each item in the fruits list
+    print("rohan loves", fruit) #it will print sentence for each fruit
+
+While loop
+===========
+	Ø When you don’t know how many times to loop ur values , but it will stop when a condition is false
+ 
+
+Conditional statements in  python
+============================
+
+	Ø Conditional statements are used to make decisions in your code based on certain conditions like True or False
+
+
+	1. If statement 
+	2. If-else statement 
+	3. If-elif-else statement 
