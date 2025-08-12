@@ -1,0 +1,95 @@
+Wt is a jenkins Node?
+=================
+
+	Ø Node:- it is a vm where the entire workload is going to run
+
+
+	Ø In jenkins a node is simply a machine that jenkins can use to run jobs
+
+
+	1. Master/controller
+  ==================
+
+	Ø The main jenkins instance that coordinates jobs, schedules builds and manages configuration 
+
+	2. Agent
+  ========
+
+	Ø Any machine (physical, vm, container or cloud instance) that executes the actual build steps sent by the controller 
+
+
+Real time analogy
+==============
+
+	Ø Think of Jenkins nodes as workers in a factory
+
+	1. The factory manager(controller) decides wt work needs to be done  and assigns it
+	2.  the factory workers(agents) actually do the work assembling products and testing them etc.
+
+
+Types Jenkins nodes
+================
+
+	1. Controller node
+  ================
+
+Purpose:- it will coordinate everything like scheduling jobs, dispatches them to agents
+When to use: small set up's and demos
+Real time analogy: the factory managers office
+
+
+	2. Static agents
+  ==============
+
+Purpose :- it will always connect to the controller
+When to use: when u have dedicated machines for builds with a predictable work load 
+Real time analogy:- full time employees 
+
+	3. Dynamic agents
+  ================
+
+Purpose :- it will create on demand and will destroyed after build completion 
+When to use:- for scalable env where your workload fluctuate and it will save cost.
+Real time analogy:- contract workers hired only when there is an extra work ,  then released afterward
+
+	4. Permanent agents
+  ==================
+
+Purpose :- always available for specific tasks
+When to use:- when builds require specialized env
+RTA:- a specialized force or team who only works on certain work/task in the factory
+
+	5. Inbound agents 
+  =================
+
+Purpose: Agent initiates the connection to the Jenkins controller
+When to use:- when the controller cannot reach the agent due to some issue
+RTA:- a remote worker who calls the manager to ask for work 
+
+	6. Outbound agents
+  ==================
+
+Purpose:- controller initiates connection to the agent 
+When to use:- when you can directly connect to agent machines
+RTA:- Manger calling the worker to give some instructions 
+
+Purpose of jenkins nodes
+=====================
+
+	1. Load distribution:- To preventing overloading the controller
+	2. Specialized build envs:- some jobs may need specific OS, tool or hardware
+	3. Salability:- spin up more agents when workloads increase 
+	4. Isolation:- jobs run on separate machines so they don’t interfere with each other
+
+
+======================================================================
+
+Where and when to use Each node type
+=================================
+
+	1. Controller node:- small startup cicd pipeline with limited jobs and  it is simple to setting up and few resources only required
+	2. Static agents:- large enterprise level app with multiple teams  and dedicated agents per team to avoid conflicts 
+	3. Dynamic agents:- high build volume with peaks and dynamic agents on Kubernetes
+	4. Permanent agents:-  builds requiring special task and dedicated specialized machines
+	5. Inbound agents:- need access to run a job in jenkins
+	6. Outbound agents:- no need access to run a job in jenkins

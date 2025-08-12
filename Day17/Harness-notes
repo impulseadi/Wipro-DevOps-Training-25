@@ -1,0 +1,53 @@
+Harness
+=======
+
+Wt it is?
+=======
+
+	Ø Harness is a next-gen CI/CD  platform that automates software delivery with built-in governance, verification and security 
+
+Why its important
+===============
+
+	Ø It will remove manual work
+	Ø It will reduce deployment risk
+	Ø It will make delivery predictable 
+
+Harness in CD
+===========
+
+	Ø It will automate end-to-end delivery
+	Ø It will give progressive deployments: canary. Blue/green , rolling
+	Ø It will automate verification and roll back using AI&ML
+	Ø It will work across kubernetes, vms and serverless
+
+Harness                                 vs                                       jenkins
+===============================================
+
+Feature
+=======
+	1.  set up - saas/cloud - slef-hosted manual 
+	2. UI - modern , visual pipelines - plugin heavy 
+	3. Deployment strategies - native canary , blue-green , rolling  - manual scritping
+	4. Rollback - automated  - manual 
+	5. Governance -   built-in-RBAC   - plugin-based
+	6. Maintenance -   minimal   - high
+
+
+
+Harness modules overview 
+======================
+
+	1. Continuous delivery:- deploy across env ( dev,qa,stag,prod) with different strategies 
+	2. Feature Flags:- it will toggle features without redeploying 
+	3. Chaos engineering:- it will simulate failures to improve resilience 
+
+
+Env set up 
+========
+
+	Ø Docker
+	Ø K8s
+	Ø Aws
+	Ø GitHub account 
+	Ø Harness account 
