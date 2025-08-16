@@ -1,0 +1,8 @@
+- hosts: worker
+  become: true
+  tasks:
+    - name: Install Git
+      dnf:
+        name: git
+        state: present
+

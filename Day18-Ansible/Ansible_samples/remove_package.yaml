@@ -1,0 +1,7 @@
+- hosts: worker
+  become: true
+  tasks:
+    - name: Remove Java if installed
+      dnf:
+        name: java-17-amazon-corretto
+        state: absent

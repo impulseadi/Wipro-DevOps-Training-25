@@ -1,0 +1,10 @@
+- hosts: worker
+  become: true
+  tasks:
+    - name: Copy custom index.html
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          <html>
+          <h1>Welcome to Ansible on Amazon Linux 2023!</h1>
+          </html>

@@ -1,0 +1,9 @@
+- hosts: worker
+  become: true
+  tasks:
+    - name: Create a new user
+      user:
+        name: devops
+        state: present
+        groups: wheel
+

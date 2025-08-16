@@ -1,0 +1,18 @@
+- name: Install Apache
+  dnf:
+    name: httpd
+    state: present
+
+- name: Start and enable Apache
+  systemd:
+    name: httpd
+    state: started
+    enabled: true
+
+- name: Deploy custom index.html
+  copy:
+    dest: /var/www/html/index.html
+    content: |
+      <html>
+      <h1>Welcome to Ansible Project on Amazon Linux 2023!</h1>
+      </html>

@@ -1,0 +1,8 @@
+- name: Install basic utilities
+  dnf:
+    name:
+      - git
+      - wget
+      - unzip
+      - tree
+    state: present

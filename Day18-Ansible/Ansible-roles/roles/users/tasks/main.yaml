@@ -1,0 +1,5 @@
+- name: Create DevOps user
+  user:
+    name: devops
+    state: present
+    groups: wheel

@@ -1,0 +1,11 @@
+- hosts: worker
+  become: true
+  tasks:
+    - name: Install common packages
+      dnf:
+        name: 
+          - git
+          - wget
+          - unzip
+          - tree
+        state: present

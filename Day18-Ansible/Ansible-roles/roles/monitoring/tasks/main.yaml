@@ -1,0 +1,5 @@
+- name: Create uptime cron job
+  cron:
+    name: "log uptime"
+    minute: "*/5"
+    job: "uptime >> /home/ec2-user/uptime.log"

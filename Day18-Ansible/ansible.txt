@@ -71,27 +71,57 @@ useradd ansible
 passwd ansible
 
 visudo
+(below the root= paste it)
 ansible ALL=(ALL) NOPASSWD: ALL
 
-*******************
+***********************************************
 
 
 
-# In Ansible Server and Host machines as well
-visudo
-vi /etc/ssh/sshd_config
+# In Ansible Master and Worker Node as well
 
-# Enable
+sudo vi /etc/ssh/sshd_config
+
+# Enable or uncomment it
 PermitRootLogin yes
+PubkeyAuthentication yes
 PasswordAuthentication yes
 
+
+# Restart the service
 service sshd restart
 
 
-**********************
+**************************************************************************************************
 
-
-# In Ansible Server
+# In Master Node
 
 su - ansible 
-ssh private Ip
+
+ssh (private-IP of Worker node)
+example = ssh 172.168.2.4
+
+You will enter into worker node from master node
+To exit or (To come out of worker node in master node)
+
+exit
+
+******************************************************
+# In Master Node
+
+If you are in root of Master node, then
+su - ansible
+
+ssh-keygen
+
+(press enter multiple times)
+
+ssh-copy-id ansible@(Private-IP-Worker-Node)
+example>  ssh-copy-id ansible@192.168.1.5
+
+ansible all -m ping
+(You are now able to make successful connection) (If it shows)
+
+
+****************************************************************************
+
