@@ -1,0 +1,97 @@
+
+
+
+# To install Ansible on Amazon Linux 2023
+
+# Update system packages
+sudo dnf update -y
+
+# Check for Python and pip
+python3 --version
+pip3 --version
+
+# Install pip using dnf
+sudo dnf install python3-pip -y
+
+# Install Ansible using pip
+pip3 install ansible --user
+
+# install Ansible
+sudo dnf install -y git python3 python3-devel python3-pip openssl ansible-core
+
+# Verify Ansible installation
+ansible --version
+
+
+
+
+
+***********
+
+#Create a default Ansible configuration file
+
+sudo mkdir -p /etc/ansible
+sudo nano /etc/ansible/ansible.cfg
+
+
+
+[defaults]
+inventory      = /etc/ansible/hosts
+host_key_checking = False
+retry_files_enabled = False
+sudo_user = ansible
+timeout = 30
+
+
+
+sudo nano /etc/ansible/hosts
+
+[web]
+192.168.1.10
+192.168.1.11
+
+[db]
+192.168.1.20
+
+
+ansible all -m ping
+
+
+
+
+
+
+*****************
+
+
+# In Host 1 and Host 2 and Ansible master
+
+sudo su
+useradd ansible
+passwd ansible
+
+visudo
+ansible ALL=(ALL) NOPASSWD: ALL
+
+*******************
+
+
+
+# In Ansible Server and Host machines as well
+visudo
+vi /etc/ssh/sshd_config
+
+# Enable
+PermitRootLogin yes
+PasswordAuthentication yes
+
+service sshd restart
+
+
+**********************
+
+
+# In Ansible Server
+
+su - ansible 
+ssh private Ip
