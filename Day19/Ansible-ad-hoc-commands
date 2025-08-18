@@ -1,0 +1,12 @@
+Ad-hoc commands 
+
+18 August 2025
+17:31
+
+	Ø Ad-hoc commands are one-time commands that you run directly from the command line to quickly perform a task on managed nodes(target servers) without writing a fully playbook yml file
+
+
+   11  ansible webservers -a "touch DevOps wipro"
+   12  ansible webservers -a "touch index.html login.html signup.html"
+   13  ansible webservers -a "mkdir ipl srh rcb"
+   14  ansible webservers -a "mkdir nasa isro"
