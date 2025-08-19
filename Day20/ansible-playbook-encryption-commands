@@ -8,4 +8,8 @@
    73  ls
    74  vi samply.yml
    75  ls
-   76  ansible-vault edit samply.yml
+   76  ansible-vault edit samply.
+      79  ansible-vault decrypt murali-playbook.yml
+   80  vi murali-playbook.yml
+   81  ls
+   82  ansible-vault decrypt samply.yml
