@@ -1,0 +1,10 @@
+# ON both master and worker servers
+
+sudo su
+
+service sshd restart
+
+# only on master node
+su - ansible
+
+ssh <worker-node-pvt-ip-add>
