@@ -1,0 +1,11 @@
+  66  ansible-vault encrypt murali-playbook.yml
+   67  ls
+   68  vi murali-playbook.yml
+   69  ls
+   70  ansible-vault edit murali-playbook.yml
+   71  ls
+   72  ansible-vault create samply.yml
+   73  ls
+   74  vi samply.yml
+   75  ls
+   76  ansible-vault edit samply.yml

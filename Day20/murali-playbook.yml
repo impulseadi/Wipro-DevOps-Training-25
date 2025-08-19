@@ -32,17 +32,10 @@
     - name: stop httpd webserver on my host machine
       action: service name=httpd state=stopped
 
-    - name: start docker on my host machine
+    - name: stop docker on my host machine
       action: service name=docker state=stopped
 
-    - name: uninstall java on my host machine 
-      action: yum name=java state=absent
 
-    - name: uninstall httpd webserver on my host machine
-      action: yum name=httpd state=absent
-
-    - name: uninstall docker on my host machine
-      action: yum name=docker state=absent
 
 
 
