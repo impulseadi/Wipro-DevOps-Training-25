@@ -1,0 +1,46 @@
+---
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+  
+    - name: install java on my host machine
+      action: yum pkg=java state=present  # present means installing java
+
+    - name: install httpd on my host machine
+      action: yum pkg=httpd state=present 
+
+    - name: install docker on my host machine
+      action: yum pkg=docker state=present
+
+
+# while installing pkgs we can start the services
+
+    - name: start httpd webserver on my host machine
+      action: service name=httpd state=started
+
+    - name: start docker on my host machine
+      action: service name=docker state=started
+
+
+# commands of ansible playbook
+
+   25  vi murali-playbook.yml
+   26  ls
+   27  vi murali-playbook.yml
+   28  ls
+   29  cat murali-playbook.yml
+   30  ls
+   31  ansible-playbook murali-playbook.yml --syntax
+   32  vi murali-playbook.yml
+   33  cat murali-playbook.yml
+   34  ansible-playbook murali-playbook.yml --syntax
+   35  vi murali-playbook.yml
+   36  ansible-playbook murali-playbook.yml --syntax
+   37  ansible-playbook murali-playbook.yml --check
+   38  ls
+   39  ansible-playbook murali-playbook.yml
+
+
+
