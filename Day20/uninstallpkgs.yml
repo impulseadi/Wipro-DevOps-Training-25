@@ -1,0 +1,15 @@
+---
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+
+    - name: uninstall java on my host machine
+      action: yum name=java* state=absent
+
+    - name: uninstall httpd webserver on my host machine
+      action: yum name=httpd state=absent
+
+    - name: uninstall docker on my host machine
+      action: yum name=docker state=absent
