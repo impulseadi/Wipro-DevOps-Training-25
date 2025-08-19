@@ -17,11 +17,34 @@
 
 # while installing pkgs we can start the services
 
+    - name: start java on my host machine
+      action: service name=java state=started
+
     - name: start httpd webserver on my host machine
       action: service name=httpd state=started
 
     - name: start docker on my host machine
       action: service name=docker state=started
+
+    - name: stop java on my host machine
+      action: service name=java state=stopped
+
+    - name: stop httpd webserver on my host machine
+      action: service name=httpd state=stopped
+
+    - name: start docker on my host machine
+      action: service name=docker state=stopped
+
+    - name: uninstall java on my host machine 
+      action: yum name=java state=absent
+
+    - name: uninstall httpd webserver on my host machine
+      action: yum name=httpd state=absent
+
+    - name: uninstall docker on my host machine
+      action: yum name=docker state=absent
+
+
 
 
 # commands of ansible playbook
