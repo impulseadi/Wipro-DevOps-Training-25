@@ -1,0 +1,6 @@
+cidr_block_vpc ="10.0.0.0/16"
+instance_tenancy = "default"
+Name_vpc = "murali-vpc"
+cidr_block_subnet = "10.0.1.0/24"
+availability_zone_pub_subnet = "us-east-1a"
+Name_subnet = "murali-public-subnet"

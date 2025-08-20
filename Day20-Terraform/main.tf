@@ -1,11 +1,11 @@
 # Create aws vpc
 
 resource "aws_vpc" "main" {
-  cidr_block       = "10.0.0.0/16"
-  instance_tenancy = "default"
+  cidr_block       = var.cidr_block_vpc
+  instance_tenancy = var.instance_tenancy
 
   tags = {
-    Name = "murali-vpc"
+    Name = var.Name_vpc
   }
 }
 
@@ -13,11 +13,11 @@ resource "aws_vpc" "main" {
 
 resource "aws_subnet" "public" {
   vpc_id     = aws_vpc.main.id
-  cidr_block = "10.0.1.0/24"
-  availability_zone = "us-east-1a"
+  cidr_block = var.cidr_block_subnet
+  availability_zone = var.availability_zone_pub_subnet
 
   tags = {
-    Name = "murali-public-subnet"
+    Name = var.Name_subnet
   }
 }
 
@@ -106,4 +106,33 @@ resource "aws_route_table" "private" {
 resource "aws_route_table_association" "b" {
   subnet_id      = aws_subnet.private.id
   route_table_id = aws_route_table.private.id
+}
+
+
+# create instacne in public subnet
+
+resource "aws_instance" "public_instance" {
+  ami           = "ami-020cba7c55df1f615"
+  instance_type = "t3.small"
+  key_name = "murali-pair-2"
+  subnet_id = aws_subnet.public.id
+  associate_public_ip_address = true
+  
+
+  tags = {
+    Name = "murali-server-1"
+  }
+}
+
+resource "aws_instance" "private_instance" {
+  ami           = "ami-0a7d80731ae1b2435"
+  instance_type = "t3.small"
+  key_name = "murali-pair-2"
+  subnet_id = aws_subnet.private.id
+  associate_public_ip_address = false
+  
+
+  tags = {
+    Name = "murali-server-2"
+  }
 }
