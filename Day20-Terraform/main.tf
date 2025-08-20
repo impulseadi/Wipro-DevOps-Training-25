@@ -3,7 +3,6 @@
 resource "aws_vpc" "main" {
   cidr_block       = var.cidr_block_vpc
   instance_tenancy = var.instance_tenancy
-
   tags = {
     Name = var.Name_vpc
   }
@@ -15,7 +14,6 @@ resource "aws_subnet" "public" {
   vpc_id     = aws_vpc.main.id
   cidr_block = var.cidr_block_subnet
   availability_zone = var.availability_zone_pub_subnet
-
   tags = {
     Name = var.Name_subnet
   }
@@ -26,10 +24,10 @@ resource "aws_subnet" "public" {
 resource "aws_subnet" "private" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.2.0/24"
-  availability_zone = "us-east-1b"
+  availability_zone = "us-east-1b"    # replace with ur availability zone
 
   tags = {
-    Name = "murali-private-subnet"
+    Name = "murali-private-subnet"     
   }
 }
 
@@ -112,7 +110,7 @@ resource "aws_route_table_association" "b" {
 # create instacne in public subnet
 
 resource "aws_instance" "public_instance" {
-  ami           = "ami-020cba7c55df1f615"
+  ami           = "ami-020cba7c55df1f615"              # Replace with ur region ami id
   instance_type = "t3.small"
   key_name = "murali-pair-2"
   subnet_id = aws_subnet.public.id
@@ -125,7 +123,7 @@ resource "aws_instance" "public_instance" {
 }
 
 resource "aws_instance" "private_instance" {
-  ami           = "ami-0a7d80731ae1b2435"
+  ami           = "ami-0a7d80731ae1b2435"          # Replace with ur region ami id
   instance_type = "t3.small"
   key_name = "murali-pair-2"
   subnet_id = aws_subnet.private.id
