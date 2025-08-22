@@ -165,3 +165,23 @@ docker login -u <username>   :- it will ask username and passwd of ur dockerhub 
 	3. docker push :- to push the image into registry
 
 docker push <tagged-image-name>
+
+How to create container
+====================
+
+docker run :-it will pull ,  it will create the container n it will start the container
+
+docker run -d --name login -p 80:80 <image-name>
+
+-d:- detached mode :- it is going to run the container in a background server (u cant get any shell for editing ur container) , it will use in prod level.
+
+--name:- provide a meaningful name to the container n it should be unique.
+
+-p : ports mapping 
+
+Host port:- it will decide by the DevOps Team, it is  our wish and it should be unique .
+
+Container or app port number:- it will decide by the Dev Team and ur app run on this port inside the container. U cane same port number for no.of containers .
+
+ 47  docker run -d --name login-app -p 80:80 login:v1
+   48  docker ps
