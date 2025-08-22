@@ -1,0 +1,167 @@
+Dockerfile
+
+21 August 2025
+16:56
+
+Wt is Dockerfile
+=============
+
+Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. This page describes the commands you can use in a Dockerfile.
+
+Dockerfile instructions 
+===================
+	Ø Whenever you want to write any Dockerfile you should create a file like this only "Dockerfile"
+	Ø Always dockerfile should begin with FROM instruction 
+
+
+	1. FROM:- it is used to specify a base image for the container app
+
+FROM ubunut
+
+FROM node:latest
+
+FROM node:1.0.2
+
+FROM python.3.1.5
+
+FROM openjdk.3.1.6
+
+================================================
+
+	2. WORKDIR:- it is used to specify/creating  a working directory inside the container to keep all ur app src files , folders etc.
+
+WORKDIR /app
+
+WOKRDIR /web
+
+WORKDIR /usr/src/app
+
+===================================================
+
+	3. COPY :- it is used to copy all ur app src, libraries, dependencies , env , configuration files from host/local machine to container machine
+
+COPY .  .
+
+COPY .  /path
+
+=====================================================
+
+	4. RUN :- it is used to execute commands while building a docker image
+
+RUN  apt update -y
+
+RUN yum update -y
+
+RUN pip install -y
+
+RUN npm install
+
+RUN apt install docker -y
+
+RUN apt install git -y
+
+RUN apt install java -y
+
+============================================================
+
+	5. MAINTAINER:- it is used to specify dockerfile owner or author
+
+MAINTAINER  murliclaha256@gmai.com
+
+===============================================================
+
+	6. CMD:- it is used to execute commands while creating the container to start or run ur app
+
+CMD  ["npm", "start"]
+
+CMD ["pip", "app.js"]
+
+CMD ["node",  "server.js"]
+
+==========================================
+
+
+	7. EXPOSE :- it will expose app or container port number
+
+EXPOSE  80
+
+EXPOSE 8080
+
+EXPOSE 9000
+
+EXPOSE 5000
+
+====================================================
+
+Create on vm following requirements 
+==============================
+
+	1. Choose only ubuntu os
+	2. Choose instance t2.small or t3.small
+	3. Configure storage give only 10 Gb
+	4. Install docker on ubuntu os
+
+
+Web servers 
+==========
+
+	1. Apache2 web server
+  ====================
+
+	Ø It is a free web server where we can host static web app only
+	Ø /var/www/html
+	Ø It will run on port number 80 only
+
+	2. Httpd:- it is for amazon linux os
+	Ø /var/www/html
+	Ø Port no is 80
+	Ø It is also free
+
+
+	3. Nginx:- it is also web server
+	Ø /var/www/html
+	Ø Port no is 80
+
+====================================================================
+
+   13  docker --version
+   14  service docker status
+   15  ls
+   16  vi Dockerfile
+   17  ls
+   18  > Dockerfile
+   19  ls
+   20  vi index.html
+   21  ls
+   22  cat index.html
+   23  ls
+   24  vi Dockerfile
+   25  ls
+   26  cat Dockerfile
+   27  ls
+   28  docker build -t login:v1 .
+   29  docker images
+   30  ls
+   31  docker tag login:v1 muralisocial123/login:v1
+   32  docker images
+   33  docker login
+   34  docker login -u
+   35  docker login -u muralisocial123
+   36  docker images
+   37  docker push muralisocial123/login:v1
+
+
+Docker image push
+================
+
+	1. Docker tag:- becz ur docker server need to recognize ur docker registry 
+
+docker tag <image-name>  <username/image-name>
+
+	2. Login to docker hub account within the server 
+
+docker login -u <username>   :- it will ask username and passwd of ur dockerhub account.
+
+	3. docker push :- to push the image into registry
+
+docker push <tagged-image-name>
