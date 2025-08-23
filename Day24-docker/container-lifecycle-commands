@@ -1,0 +1,98 @@
+Container lifecycle 
+===============
+
+docker create:- it will create the container only but not start the container and manually you need to start the container (don’t use -d flag)
+
+docker run:- it will pull the image, it will create the container and will start the container
+
+docker ps:- it will show you only running containers
+docker ps -a: it will show you all containers including stopped.
+
+docker restart:- it will restart ur container by using container id or name.
+
+docker stop :- container process is stopped and u can't interact with container
+
+docker pause:- it will freeze the container process but still its running and u can interact.
+
+docker unpause:-
+
+docker logs :- 
+
+docker inspect:- 
+
+Curl: 
+
+docker exec -it:- to login into the container
+
+docker rm:- it will delete only stopped containers
+
+docker rm -f :- it will delete running containers 
+
+docker rmi:- it will delete only unused images 
+
+Docker rmi -f :- it will delete used images as well
+
+
+docker push:- it will push the images
+
+docker tag: it will tag ur images
+
+docker pull:- it will download the images from the registry
+
+
+# Practical approach commands
+
+   85  docker ps
+   86  docker ps -a
+   87  docker start c-1
+   88  docker ps
+   89  docker stop c-1
+   90  docker ps
+   91  docker ps -a
+   92  docker restart fb4ade5796cb
+   93  docker ps
+   94  docker pause e-commerce
+   95  docker ps
+   96  docker unpause 20e09a7bb216
+   97  docker ps
+   98  docker ps -a
+   99  docker ps
+  100  docker logs login-app
+  101  docker logs c-1
+  102  docker ps
+  103  docker inspect 20e09a7bb216
+  104  docker ps
+  105  curl 172.17.0.3:80
+  106  docker ps
+  107  docker exec -it login-app bash
+  108  docker exec -it e-commerce bash
+  109  ls
+  110  docker ps
+  111  docker rm c-1
+  112  docker stop c-1
+  113  docker ps -a
+  114  docker rm fb4ade5796cb
+  115  docker ps -a
+  116  docker rm -f login-app
+  117  docker ps -a
+  118  docker images
+  119  docker rmi login:v1
+  120  docker images
+  121  docker rmi nginx
+  122  docker images
+  123  docker rmi 9d6fab76c871
+  124  docker images
+  125  docker rmi -f e-commerce
+  126  docker rmi -f e-commerce:v1
+  127  docker images
+  128  docker ps
+  129  docker imges
+  130  docker imsges
+  131  docker images
+  132  docker pull muralisocial123/retail-app:v2
+  133  docker images
+  134  docker pull muralisocial123/devsecops-example-app:latest
+  135  docker images
+  136  docker pull python:3.9.23-trixie
+  137  docker images
+  138  docker pull openjdk:26-oraclelinux9
