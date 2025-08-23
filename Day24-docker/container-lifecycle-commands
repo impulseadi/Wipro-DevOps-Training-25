@@ -96,3 +96,11 @@ docker pull:- it will download the images from the registry
   136  docker pull python:3.9.23-trixie
   137  docker images
   138  docker pull openjdk:26-oraclelinux9
+
+207  docker ps -a
+  208  docker rm -f $(docker ps -a)
+  209  docker rm -f $(docker ps -aq)
+  210  docker ps -a
+  211  docker images
+  212  docker rmi $(docker images -q)
+  213  docker images
